@@ -2,6 +2,6 @@
 {
     interface IPrinter
     {
-        public void Printer(string document);
+        void Printer(string document);
     }
 }

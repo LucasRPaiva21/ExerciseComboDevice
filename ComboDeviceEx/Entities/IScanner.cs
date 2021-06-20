@@ -2,6 +2,6 @@
 {
     interface IScanner
     {
-        public string Scan();
+        string Scan();
     }
 }

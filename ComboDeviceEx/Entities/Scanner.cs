@@ -2,11 +2,16 @@
 
 namespace ComboDeviceEx.Entities
 {
-    class Scanner : IScanner
+    class Scanner : Device, IScanner
     {
+        public override void ProcessDoc(string document)
+        {
+            Console.WriteLine("Scanner procesing: " + document);
+        }
+
         public string Scan()
         {
-            throw new NotImplementedException();
+            return "Scanner scan result";
         }
     }
 }

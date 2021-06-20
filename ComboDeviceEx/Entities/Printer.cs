@@ -1,14 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ComboDeviceEx.Entities
 {
-    class Printer : IPrinter
+    class Printer : Device, IPrinter
     {
+        public override void ProcessDoc(string document)
+        {
+            Console.WriteLine("Printer processing: " + document);
+        }
+
         void IPrinter.Printer(string document)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Printer print: " + document);
         }
     }
 }
